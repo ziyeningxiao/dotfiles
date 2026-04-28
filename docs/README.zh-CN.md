@@ -7,9 +7,7 @@
 - git
 - stow
 - zsh
-- kitty
-- terminator
-- anaconda或miniconda
+- kitty or terminator
 
 ## 二、配置和优化
 
@@ -17,7 +15,7 @@
 
 - 在"dotfiles"项目中，oh-my-zsh是其子项目,可以直接通过软连接安装
 
-```sh
+```bash
 # 从github拉取dotfiles项目
 mkdir -p ~/Documents/github
 git clone https://github.com/ZavierPei/dotfiles.git ~/Documents/github/dotfiles --recurse-submodules
@@ -59,66 +57,40 @@ source ~/.zshrc
 
 #### 安装方法
 
-- 根据系统版本下载对应neovim安装包，解压后存放在"/opt/nvim-linux64"下面
-- 在`~/.local/bin`中创建软连接
+```bash
+# 1.安装依赖：官方预编译包需要一些基础库才能运行
+sudo dnf install compat-lua-libs libtermkey libtree-sitter libvterm luajit luajit2.1-luv msgpack unibilium xsel
 
-```sh
+# 2. 根据系统版本(如x86、arm等)下载对应neovim安装包，解压后存放在"/opt/nvim-linux64"下面，并且在`~/.local/bin`中创建软连接
 ln -s /opt/nvim-linux64/bin/nvim ~/.local/bin/
 ```
 
-### 3.lunarvim
+### 3.gnome-yaru主题安装
 
-- [lunarvim官方安装文档](https://www.lunarvim.org/zh-Hans/docs/installation)
+- 前提准备
 
-#### a.前置条件
+```bash
+# 安装核心依赖包
+sudo dnf install gtk-murrine-engine sassc gnome-themes-extra
 
-- 请确保拥有最新版本的 Neovim v0.9.5+.
-- 在系统上安装 git、make、pip、python、npm、node、cargo、gcc、fd和lazygit.
-- 可以使用对应系统的包管理工具下载，或者通过homebrew安装.
+# 安装GNOME优化工具(GNOME Tweaks)
+sudo dnf install gnome-tweaks
 
-#### b.安装命令
-
-```sh
-LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
+# 安装User Themes扩展
+sudo dnf install gnome-shell-extension-user-theme
 ```
 
-- $HOME/.config/lvim：lvim的个性化配置文件；
-- $HOME/.local/bin/lvim：lvim的执行文件；
-- $HOME/.cache/lvim：lvim的缓存目录；
-- $HOME/.config/lvim.old：可能存在的lvim个性化文件备份
+- 安装Yaru主题
 
-#### c.卸载命令
+```bash
+# 选项一：安装基础Yaru主题包(此包会自动安装GTK和Shell主题)
+sudo dnf install gnome-shell-theme-yaru
 
-```sh
-rm -rf ~/.config/lvim \  
-       ~/.local/share/lunarvim \  
-       ~/.local/bin/lvim \  
-       ~/.config/lvim.old \  
-       ~/.cache/lvim
+# 选项二：安装整套Ubuntu风格(图标主题、光标主题、声音主题，以及GTK2/3/4的完整支持)
+sudo dnf install yaru-icon-theme yaru-cursor-theme yaru-sound-theme yaru-gtk2-theme yaru-gtk3-theme yaru-gtk4-theme
 ```
 
-### 4.gnome-yaru主题安装
-
-- 软件所需程序：git、meson、sassc、inkscape、optipng、ruby
-- 在Debian/Ubuntu系统上需要安装：libgtk-4-dev、libgio-2.0-dev
-- 在Red Hat/CentOS系统上需要安装：glib2-devel
-
-```sh
-git clone https://github.com/ubuntu/yaru.git
-cd yaru
-
-# Initialize build system (only required once per repo)
-meson build
-cd build
-
-# Build and install
-sudo ninja install
-
-# 备用地址
-git clone https://gitee.com/qingmengfengyun/yaru.git
-```
-
-### 5.gnome桌面优化
+### 4.gnome桌面优化
 
 - 所需程序：gnome-tweaks、gnome-shell-extensions
 
@@ -141,7 +113,7 @@ git clone https://gitee.com/qingmengfengyun/yaru.git
 
 ### 1.ssh服务启用方式
 
-```sh
+```bash
 # 安装SSH服务
 sudo dnf install openssh-server
 
@@ -160,7 +132,7 @@ sudo systemctl status sshd
 - 虚拟机开机自动挂载主机路径
 - 需要使用crontab工具
 
-```sh
+```bash
 sudo crontab -e
 # 输入以下命令
 @reboot mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
@@ -170,13 +142,13 @@ sudo crontab -e
 
 - 生成ssh密钥
 
-```sh
+```bash
 ssh-keygen -t rsa -b 4096
 ```
 
 - 如果需要指定密钥名(如“gitkey”)，则需要在config中添加如下内容
 
-```sh
+```bash
 # github
 Host github.com
 HostName github.com
@@ -194,7 +166,7 @@ IdentityFile ~/.ssh/gitkey
 
 - fish shell安装和优化配置流程
 
-```sh
+```bash
 # 安装fish shell
 sudo dnf install fish
 
