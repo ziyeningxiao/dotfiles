@@ -1,0 +1,20 @@
+# Rime user dictionary
+#@/db_name	rime_ice
+#@/db_type	userdb
+#@/rime_version	1.16.1
+#@/tick	15
+#@/user_id	ee5c281b-b5db-4ec4-913e-07f7ba7a1927
+ce shi 	测试	c=2 d=1.98511 t=6
+chun hua qiu yue 	春花秋月	c=1 d=1 t=4
+de 	的	c=0 d=0.1 t=13
+hao xiang 	好像	c=1 d=1 t=13
+he shi liao 	何时了	c=1 d=1 t=5
+jian pan 	键盘	c=1 d=1 t=11
+liu shi shi 	刘诗诗	c=3 d=2.89319 t=15
+tai xiao le 	太小了	c=1 d=1 t=12
+wu qi long 	吴奇隆	c=1 d=1 t=2
+yang mi 	杨幂	c=1 d=1 t=9
+yang rong 	杨蓉	c=1 d=1 t=8
+ye ke yi 	也可以	c=0 d=0.1 t=13
+ye ke yi de 	也可以的	c=1 d=1 t=14
+ying ze qu 	迎泽区	c=1 d=1 t=10
