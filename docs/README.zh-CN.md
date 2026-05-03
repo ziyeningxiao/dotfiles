@@ -1,6 +1,6 @@
 # Linux通用配置指南
 
-- [Englist](../README.md) | [中文](./README.zh-CN.md)
+- [English](../README.md) | [中文](./README.zh-CN.md)
 
 ## 一、需要安装软件
 
@@ -49,13 +49,18 @@ git clone https://gitee.com/qingmengfengyun/powerlevel10k.git ${ZSH_CUSTOM:-~/.o
 source ~/.zshrc
 ```
 
-**如果powerlevel10k字体缺失，可以到[powerlevel10k-media](https://gitee.com/qingmengfengyun/powerlevel10k-media)下载.ttf结尾的四个文件，新建"~/.local/share/fonts/ttf/MesloLGS NF"目录，并将下载的文件存放到这个目录下即可**
+**如果powerlevel10k字体缺失，可以到[powerlevel10k-media](https://gitee.com/qingmengfengyun/powerlevel10k-media)下载.ttf结尾的四个文件，新建"~/.local/share/fonts/MesloLGS-NF"目录，并将下载的文件存放到这个目录下即可**
 
-### 2.neovim
+### 2.neovim + lazyvim + lazygit安装
+
+#### neovim安装
+
+1. 从软件包安装
+    > Windows、macOS和Linux可以从预编译软件包安装，托管软件包已集成到Homebrew、Debian、Ubuntu、Fedora、Arch Linux、Void Linux、Gentoo等系统中！
+
+2. 从github下载安装
 
 - [neovim官方github地址](https://github.com/neovim/neovim)
-
-#### 安装方法
 
 ```bash
 # 1.安装依赖：官方预编译包需要一些基础库才能运行
@@ -65,30 +70,81 @@ sudo dnf install compat-lua-libs libtermkey libtree-sitter libvterm luajit luaji
 ln -s /opt/nvim-linux64/bin/nvim ~/.local/bin/
 ```
 
+#### lazyvim安装
+
+- [lazyvim官方网站](https://www.lazyvim.org/)
+
+1. 备份当前的 Neovim 文件
+
+    ```bash
+    # required
+    mv ~/.config/nvim{,.bak}
+
+    # optional but recommended
+    mv ~/.local/share/nvim{,.bak}
+    mv ~/.local/state/nvim{,.bak}
+    mv ~/.cache/nvim{,.bak}
+    ```
+
+2. 克隆启动器
+
+    ```bash
+    git clone https://github.com/LazyVim/starter ~/.config/nvim
+    ```
+
+3. 删除.git文件夹
+
+    ```bash
+    rm -rf ~/.config/nvim/.git
+    ```
+
+4. 启动 Neovim
+
+    ```bash
+    nvim
+    ```
+
+#### lazygit安装
+
+- 通过 COPR 仓库安装
+
+1. 启用仓库并安装
+
+    ```bash
+    sudo dnf copr enable rivenirvana/lazygit
+    sudo dnf install lazygit
+    ```
+
+2. 验证安装
+
+    ```bash
+    lazygit --version
+    ```
+
 ### 3.gnome-yaru主题安装
 
-- 前提准备
+1. 前提准备
 
-```bash
-# 安装核心依赖包
-sudo dnf install gtk-murrine-engine sassc gnome-themes-extra
+    ```bash
+    # 安装核心依赖包
+    sudo dnf install gtk-murrine-engine sassc gnome-themes-extra
 
-# 安装GNOME优化工具(GNOME Tweaks)
-sudo dnf install gnome-tweaks
+    # 安装GNOME优化工具(GNOME Tweaks)
+    sudo dnf install gnome-tweaks
 
-# 安装User Themes扩展
-sudo dnf install gnome-shell-extension-user-theme
-```
+    # 安装User Themes扩展
+    sudo dnf install gnome-shell-extension-user-theme
+    ```
 
-- 安装Yaru主题
+2. 安装Yaru主题
 
-```bash
-# 选项一：安装基础Yaru主题包(此包会自动安装GTK和Shell主题)
-sudo dnf install gnome-shell-theme-yaru
+    ```bash
+    # 选项一：安装基础Yaru主题包(此包会自动安装GTK和Shell主题)
+    sudo dnf install gnome-shell-theme-yaru
 
-# 选项二：安装整套Ubuntu风格(图标主题、光标主题、声音主题，以及GTK2/3/4的完整支持)
-sudo dnf install yaru-icon-theme yaru-cursor-theme yaru-sound-theme yaru-gtk2-theme yaru-gtk3-theme yaru-gtk4-theme
-```
+    # 选项二：安装整套Ubuntu风格(图标主题、光标主题、声音主题，以及GTK2/3/4的完整支持)
+    sudo dnf install yaru-icon-theme yaru-cursor-theme yaru-sound-theme yaru-gtk2-theme yaru-gtk3-theme yaru-gtk4-theme
+    ```
 
 ### 4.gnome桌面优化
 
@@ -164,6 +220,7 @@ IdentityFile ~/.ssh/gitkey
 
 ### 4.fish shell配置
 
+- **[oh-my-fish官方github地址](https://github.com/oh-my-fish/oh-my-fish)**
 - fish shell安装和优化配置流程
 
 ```bash
@@ -176,5 +233,3 @@ curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install 
 # 关联配置文件
 cd ~/Documents/github/dotfiles && stow -t ~ fish
 ```
-
-- **[oh-my-fish官方github地址](https://github.com/oh-my-fish/oh-my-fish)**
