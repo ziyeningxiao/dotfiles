@@ -2,37 +2,44 @@
 #@/db_name	rime_ice
 #@/db_type	userdb
 #@/rime_version	1.16.1
-#@/tick	36
+#@/tick	43
 #@/user_id	ee5c281b-b5db-4ec4-913e-07f7ba7a1927
-an zhuang 	安装	c=4 d=3.7861 t=36
-ban ben 	版本	c=1 d=0.985112 t=36
-bei fen 	备份	c=1 d=0.965605 t=36
-ce shi 	测试	c=2 d=1.89776 t=36
-chun hua qiu yue 	春花秋月	c=1 d=0.946485 t=36
-cong 	从	c=1 d=0.995012 t=36
-dao 	到	c=1 d=1 t=36
-de 	的	c=0 d=0.099005 t=36
-guan fang wang zhan 	官方网站	c=1 d=0.960789 t=36
-hao xiang 	好像	c=1 d=0.99005 t=36
-he shi liao 	何时了	c=1 d=0.951229 t=36
-jian pan 	键盘	c=1 d=0.980199 t=36
-ke yi 	可以	c=1 d=0.99005 t=36
-liu shi shi 	刘诗诗	c=3 d=2.89319 t=36
-pei zhi 	配置	c=1 d=0.99005 t=36
-pei zhi wei 	裴志伟	c=1 d=1 t=36
-qing hua yuan 	清华源	c=1 d=1 t=36
-rong qi 	容器	c=1 d=0.980199 t=36
-ru he 	如何	c=1 d=0.99005 t=36
-sheng ji 	升级	c=1 d=0.995012 t=36
-shu ru fa 	输入法	c=1 d=0.985112 t=36
-tai xiao le 	太小了	c=1 d=0.985112 t=36
-tian jia 	添加	c=1 d=0.980199 t=36
-wen jian 	文件	c=1 d=0.995012 t=36
-wu qi long 	吴奇隆	c=1 d=0.937067 t=36
-yang mi 	杨幂	c=1 d=0.970446 t=36
-yang rong 	杨蓉	c=1 d=0.965605 t=36
-ye ke yi 	也可以	c=0 d=0.099005 t=36
-ye ke yi de 	也可以的	c=1 d=0.995012 t=36
-ying ze qu 	迎泽区	c=1 d=0.97531 t=36
-yu fa 	愈发	c=1 d=0.970446 t=36
-yu fa 	语法	c=1 d=0.97531 t=36
+an zhuang 	安装	c=4 d=3.7861 t=43
+ban ben 	版本	c=1 d=0.985112 t=43
+bei fen 	备份	c=1 d=0.965605 t=43
+bi zhi 	壁纸	c=1 d=0.985112 t=43
+ce shi 	测试	c=2 d=1.89776 t=43
+chun hua qiu yue 	春花秋月	c=1 d=0.946485 t=43
+cong 	从	c=1 d=0.995012 t=43
+dao 	到	c=1 d=1 t=43
+de 	的	c=0 d=0.099005 t=43
+dong xia guo 	东夏国	c=1 d=1 t=43
+ge shi hua 	格式化	c=1 d=0.995012 t=43
+guan fang wang zhan 	官方网站	c=1 d=0.960789 t=43
+hao xiang 	好像	c=1 d=0.99005 t=43
+he shi liao 	何时了	c=1 d=0.951229 t=43
+jian pan 	键盘	c=1 d=0.980199 t=43
+ke nan 	柯南	c=1 d=0.995012 t=43
+ke yi 	可以	c=1 d=0.99005 t=43
+liu shi shi 	刘诗诗	c=3 d=2.89319 t=43
+ming zhen tan 	名侦探	c=1 d=1 t=43
+pei zhi 	配置	c=1 d=0.99005 t=43
+pei zhi wei 	裴志伟	c=1 d=1 t=43
+qing hua yuan 	清华源	c=1 d=1 t=43
+rong qi 	容器	c=1 d=0.980199 t=43
+ru he 	如何	c=1 d=0.99005 t=43
+sheng ji 	升级	c=1 d=0.995012 t=43
+shu ru fa 	输入法	c=1 d=0.985112 t=43
+tai xiao le 	太小了	c=1 d=0.985112 t=43
+tian jia 	添加	c=1 d=0.980199 t=43
+wen dang 	文档	c=1 d=1 t=43
+wen jian 	文件	c=1 d=0.995012 t=43
+wu qi long 	吴奇隆	c=1 d=0.937067 t=43
+yang mi 	杨幂	c=1 d=0.970446 t=43
+yang rong 	杨蓉	c=1 d=0.965605 t=43
+ye ke yi 	也可以	c=0 d=0.099005 t=43
+ye ke yi de 	也可以的	c=1 d=0.995012 t=43
+ying ze qu 	迎泽区	c=1 d=0.97531 t=43
+yu fa 	愈发	c=1 d=0.970446 t=43
+yu fa 	语法	c=1 d=0.97531 t=43
+zhong wen 	中文	c=1 d=0.99005 t=43
